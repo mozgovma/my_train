@@ -1,0 +1,5 @@
+{
+  "build/script.js": "autoscript.bundle.js",
+  "build/react.js": "autoreact.bundle.js",
+  "build/961.bundle.js": "auto961.bundle.js"
+}

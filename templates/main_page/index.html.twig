@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('build/assets_styles_app_css.css') }}">
+		{% endblock %}
+		<title>MyResume</title>
+        <img src="" alt="">
+		<link rel="icon" href="{{ ('') }}" type="image/png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+		<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header id="root">
+			</header>
+			<div id="full-width-element"></div>
+			<sidebar id="sidebar"></sidebar>
+			<main id="main"></main>
+			<section id="section"></section>
+			<content id="content"></content>
+			<footer>
+				<div id="footer">
+					<ul>
+						<li>sflksdjf</li>
+						<li>sdfsdfsdf</li>
+						<li>sdfsdfsdf</li>
+						<li>sdfsdfs</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	{% block javascripts %}
+		<script src="{{ asset('build/React-plx.js') }}"></script>
+		<script src="{{ asset('build/Header.js') }}"></script>
+		<script src="{{ asset('build/vendors-node_modules_react-dom_index_js.js') }}"></script>
+		<script src="{{ asset('build/vendors-node_modules_atropos_atropos-react_mjs.js') }}"></script>
+		<script src="{{ asset('build/script.js') }}"></script>
+	{% endblock %}
+	</body>
+</html>

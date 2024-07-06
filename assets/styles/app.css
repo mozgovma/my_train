@@ -1,0 +1,590 @@
+* {
+    background-color:#2C3646;
+    margin: 0;
+    padding: 0;
+}
+.textResume{
+  background-color: transparent;
+  margin: 5%;
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.mainPart{
+  line-height: 1.75;
+  background-color: transparent;
+}
+.textHi{
+  background-color: transparent;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 160%;
+}
+.burger-menu-button {
+  font-size: 24px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  color: white;
+  transition: transform 0.3s;
+  z-index: 1001; /* Установка наивысшего z-index для кнопки */
+}
+.menu-list {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.3s ease, visibility 0.3s ease;
+  z-index: 1000 !important; /* Установка высокого z-index для меню */
+}
+
+.menu-list.close {
+  transform: translateX(-100%);
+  visibility: hidden;
+}
+
+.menu-list.open {
+  transform: translateX(0);
+  visibility: visible;
+}
+.burger-menu-button.burger {
+  transform: rotate(0deg);
+}
+
+.burger-menu-button.close {
+  transform: rotate(90deg);
+}
+.burger-menu-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+ul.menu-list {
+  position: absolute;
+  top: 0;
+  left: -300px; /* Изначально скрываем меню за левым краем экрана */
+  width: 70%;
+    max-width: 100%;
+  height: 100vh;
+  background-color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1010;
+  transition: left 0.3s; /* Используем transition для анимации движения */
+  pointer-events: none;
+}
+
+ul.menu-list.open {
+  left: -4%;
+  top: -38%;
+  pointer-events: auto;
+}
+
+ul.menu-list li {
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  margin: 0 2%;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 2fr 1fr;
+  grid-template-areas:
+      "header header header"
+      "fullwidth fullwidth fullwidth"
+      "sidebar main main"
+      "sidebar section content"
+      "footer footer footer";
+}
+.burger-menu-button{
+  display: none;
+}
+@media (min-width: 2000px) {
+  .Mainlogo{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 200% !important;
+    -webkit-background-clip: text;
+  }
+  .Mainlogo-2{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 500% !important;
+    -webkit-background-clip: text;
+  }
+  .square {
+    position: relative;
+    width: 100px !important;
+    height: 100px !important;
+    background-color: transparent;
+  }
+  .square-1 {
+    position: relative;
+    width: 100px !important;
+    height: 100px !important;
+    background-color: transparent;
+  }
+  .square-1-1 {
+    position: relative;
+    width: 100px !important;
+    height: 100px !important;
+    background-color: transparent;
+  }
+  .square-1-1-1 {
+    position: relative;
+    width: 100px !important;
+    height: 100px !important;
+    background-color: transparent;
+  }
+  .square span{
+    font-size: x-large !important;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "header"
+          "fullwidth"
+          "sidebar"
+          "main"
+          "section"
+          "content"
+          "footer";
+  }
+  .button{
+    display: none !important;
+  }
+  .burger-menu-button{
+    display: block;
+  }
+  .Mainnavmenu{
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center;
+    margin: 2%;
+  }
+  .square {
+    position: relative;
+    width: 150px !important;
+    height: 50px !important;
+    background-color: #333 !important;
+  }
+  .square-1 {
+    position: relative;
+    width: 150px !important;
+    height: 50px !important;
+    background-color: #333 !important;
+  }
+  .square-1-1 {
+    position: relative;
+    width: 150px !important;
+    height: 50px !important;
+    background-color: #333 !important;
+  }
+  .square-1-1-1 {
+    position: relative;
+    width: 150px !important;
+    height: 50px !important;
+    background-color: #333 !important;
+  }
+  .square span{
+    font-size: x-large !important;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px !important;
+  }
+  .button-menu {
+    margin-bottom: 50px; /* Расстояние между кнопками */
+    text-align: center;
+  }
+}
+
+header {
+  grid-area: header;
+}
+sidebar {
+  grid-area: sidebar;
+}
+main {
+  grid-area: main;
+}
+section {
+  grid-area: section;
+}
+content {
+  grid-area: content;
+}
+footer {
+  grid-area: footer;
+}
+#full-width-element {
+  grid-area: fullwidth;
+  position: relative;
+}
+.Mainlogo{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 200%;
+    -webkit-background-clip: text;
+}
+.Mainlogo-2{
+  color: white;
+  display: flex;
+  align-items: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 200%;
+  -webkit-background-clip: text;
+}
+.Mainnavmenu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2%;
+}
+#myButton {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+#myButton:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 50%; /* Задайте ширину границы, которую вы хотите */
+    border-top: 1px solid #5ec2c3;
+    border-right: 1px solid #5ec2c3;
+  }
+  #myButton:before:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 50%; /* Задайте ширину границы, которую вы хотите */
+    border-top: 1px solid #5ec2c3;
+    border-right: 1px solid #5ec2c3;
+  }
+  .button{
+    display: contents;
+  }
+  .square {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+  }
+  
+  .square::before,
+  .square::after {
+    content: "";
+    position: absolute;
+    height: 0.8px;
+    background-color: #5ec2c3;
+    box-shadow: 0 0 5px #5ec2c3, 0 0 25px #5ec2c3,0 0 50px #5ec2c3,0 0 100px #5ec2c3;
+  }
+  
+  .square::before {
+    top: 0;
+    left: 0;
+    width: 10%;
+  }
+  
+  .square::after {
+    bottom: 0;
+    right: 0;
+    width: 10%;
+  }
+  
+  .square-1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+  }
+  
+  .square-1::before,
+  .square-1::after {
+    content: "";
+    position: absolute;
+    height: 10%;
+    background-color:#5ec2c3;
+    box-shadow: 0 0 5px #5ec2c3, 0 0 25px #5ec2c3,0 0 50px #5ec2c3,0 0 100px #5ec2c3;
+  }
+  
+  .square-1::before {
+    top: 0;
+    left: 0;
+    width: 1px;
+    z-index: 1;
+  }
+  
+  .square-1::after {
+    bottom: 0;
+    right: 0;
+    width: 1px;
+  }
+  .square-1-1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+  }
+  
+  .square-1-1::before,
+  .square-1-1::after {
+    content: "";
+    position: absolute;
+    height: 10%;
+    background-color:#5ec2c3;
+    box-shadow: 0 0 5px #5ec2c3, 0 0 25px #5ec2c3,0 0 50px #5ec2c3,0 0 100px #5ec2c3;
+  }
+  
+  .square-1-1::before {
+    top: 0;
+    right: 0;
+    width: 1px;
+    z-index: 1;
+  }
+  
+  .square-1-1::after {
+    bottom: 0;
+    left: 0;
+    width: 1px;
+  }
+  .square-1-1-1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+  }
+  
+  .square-1-1-1::before,
+  .square-1-1-1::after {
+    content: "";
+    position: absolute;
+    height: 0.8px;
+    background-color:#5ec2c3;
+    box-shadow: 0 0 5px #5ec2c3, 0 0 25px #5ec2c3,0 0 50px #5ec2c3,0 0 100px #5ec2c3;
+  }
+  
+  .square-1-1-1::before {
+    top: 0;
+    right: 0;
+    width: 10%;
+    z-index: 1;
+  }
+  
+  .square-1-1-1::after {
+    bottom: 0;
+    left: 0;
+    width: 10%;
+  }
+  .button-menu {
+    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .button-menu:hover {
+    transform: scale(1.2);
+    border: 1px solid #5ec2c3;
+    box-shadow: 0 0 5px #5ec2c3, 0 0 25px #5ec2c3,0 0 50px #5ec2c3,0 0 100px #5ec2c3;
+    background: #5ec2c3;
+  }
+  
+  .button-menu:hover:after {
+    animation: none;
+  }
+  
+  .button-menu:not(:hover) {
+    transform: scale(1);
+  }
+  .no-before-after:before, .no-before-after:after 
+  { 
+    display: none;
+  }
+  .square {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square span {
+    color: #ffffff; 
+    transition: color 0.3s ease;
+    background-color: transparent;
+    text-decoration: none !important;
+    user-select: none;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.button-menu:hover .square span {
+    color: #000000;
+    background-color: transparent;
+}
+.square a {
+  text-decoration: none; 
+}
+@keyframes fallFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+ 
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fallFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+ 
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fallFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+ 
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fallFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+ 
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.section{
+  background-color: #5ec2c3;
+  border: 1px solid #2C3646;
+  height: 100%;
+  border-radius: 10px;
+}
+.sidebar{
+  background-color: #5ec2c3;
+  border: 1px solid #2C3646;
+  height: 100%;
+  border-radius: 10px;
+}
+.main{
+  background-color: #5ec2c3;
+  border: 1px solid #2C3646;
+  height: 100%;
+  border-radius: 10px;
+}
+.content{
+  background-color: #5ec2c3;
+  border: 1px solid #2C3646;
+  height: 100%;
+  border-radius: 10px;
+}
+.fullWidth{
+  border: 1px solid #2C3646;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+    z-index: 1;
+}
+.Mainnavmenu {
+  animation: fallFromTop 1s forwards;
+}
+#footer {
+  background-color: black !important;
+}
+#root{
+  position: relative;
+    z-index: 10;
+}
+#app{
+  display: grid;
+  background: transparent;
+  height: 100%;
+}
+.my-atropos {
+  width: 65%;
+}
+.atropos-header{
+  position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    display: block;
+    z-index: 1;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    max-width: none;
+    background: transparent;
+}
+.atropos {
+  position: relative;
+  display: block;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  
+}
+.atropos-rotate, .atropos-scale {
+  width: 100%;
+    height: 100%;
+    /* transform-style: preserve-3d; */
+    transition-property: transform;
+    display: block;
+    transform-origin: center;
+}
+.atropos-inner, .atropos-rotate {
+  position: relative;
+}
+.atropos-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  display: block;
+  border-radius: 15px;
+}
